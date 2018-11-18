@@ -1,33 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const App = React.createElement(
-  'div',
-  {
-      className: 'wrapper',
-      items: '2',
-  },
-  [
-      React.createElement(
-          'h1',
-          {
-              className: 'mainHeader',
-          },
-          'Hello, world',
-      ),
-      React.createElement(
-          'h2',
-          {
-              className: 'secondaryHeader',
-          },
-          'Hello, eduweb',
-      )
-  ]
+const App = () => (
+    <div className="wrapper">
+        <h1 className="mainHeader">Hello World</h1>
+        <h2 className="secondaryHeader">Hello eduweb</h2>
+    </div>
 );
 
 ReactDOM.render(
     // rendered element
-    App,
+    <App />,
     // target
     document.getElementById('root')
 );
