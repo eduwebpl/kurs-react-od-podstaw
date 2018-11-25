@@ -1,12 +1,13 @@
 .listItem__wrapper {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding: 50px 30px;
     display: flex;
     align-items: center;
 }
 
 .listItem__image {
+    flex-shrink: 0;
+    margin-right: 30px;
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -19,6 +20,7 @@
 }
 
 .listItem__description {
+    margin: 10px 0 20px;
     font-weight: 300;
 }
 
