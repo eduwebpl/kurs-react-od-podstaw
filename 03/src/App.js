@@ -1,27 +1,28 @@
 import React from 'react';
 import ListWrapper from './components/ListWrapper/ListWrapper';
 import './index.css';
+import Form from './components/Form/Form';
 
-const initialStateArray = [
+const initialStateItems = [
             {
-                image: 'https://www.tate.org.uk/art/images/research/2148_10.jpg',
+                image: 'https://s3.eu-central-1.amazonaws.com/eduweb-image/blacksquare_01+(1).JPG',
                 name: 'Dan Abramov',
                 twitterLink: 'https://twitter.com/dan_abramov',
             },
             {
-                image: 'https://www.tate.org.uk/art/images/research/2148_10.jpg',
+                image: 'https://s3.eu-central-1.amazonaws.com/eduweb-image/blacksquare_01+(1).JPG',
                 name: 'Ryan Florence',
                 description: 'Making React accessible for users and developers at https://reach.tech . Online learning, workshops, OSS, and consulting.',
                 twitterLink: 'https://twitter.com/ryanflorence',
             },
             {
-                image: 'https://www.tate.org.uk/art/images/research/2148_10.jpg',
+                image: 'https://s3.eu-central-1.amazonaws.com/eduweb-image/blacksquare_01+(1).JPG',
                 name: 'Michael Jackson',
                 description: 'Maker. Co-author of React Router. Working on @ReactTraining. Created @unpkg. Head over heels for @cari.',
                 twitterLink: 'https://twitter.com/mjackson',
             },
             {
-                image: 'https://www.tate.org.uk/art/images/research/2148_10.jpg',
+                image: 'https://s3.eu-central-1.amazonaws.com/eduweb-image/blacksquare_01+(1).JPG',
                 name: 'Kent C. Dodds',
                 description: 'Making software development more accessible · Husband, Father, Latter-day Saint, Teacher, OSS, GDE, @TC39 · @PayPalEng @eggheadio @FrontendMasters · #JS',
                 twitterLink: 'https://twitter.com/kentcdodds',
@@ -30,15 +31,24 @@ const initialStateArray = [
 
 class App extends React.Component { 
     state = {
-        items: [...initialStateArray],
+        items: [...initialStateItems],
+    }
+    
+    addItem = (e) => {
+        e.preventDefault();
+        console.log(e.target[0].value);
+        console.log(e.target[1].value);
+        console.log(e.target[2].value);
+        console.log(e.target[3].value);
     }
     
     render() {
         return (
             <div>
                 <ListWrapper 
-                    items={this.state.items} 
+                    items={this.state.items}
                 />
+                <Form submitFn={this.addItem} />
             </div>
         )
     }
