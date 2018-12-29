@@ -5,8 +5,7 @@ import Form from "./components/Form/Form";
 
 const initialStateItems = [
   {
-    image:
-      "https://pbs.twimg.com/profile_images/906557353549598720/oapgW_Fp.jpg",
+    image: "https://pbs.twimg.com/profile_images/906557353549598720/oapgW_Fp.jpg",
     name: "Dan Abramov",
     description: "The creator of React",
     twitterLink: "https://twitter.com/dan_abramov"
