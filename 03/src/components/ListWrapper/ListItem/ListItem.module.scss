@@ -1,8 +1,21 @@
+@keyframes appear {
+  0% {
+    opacity: 0;
+    top: 35px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
 .wrapper {
     list-style: none;
     padding: 50px 30px;
     display: flex;
     align-items: center;
+    position: relative;
+    animation: appear .5s ease;
 }
 
 .image {

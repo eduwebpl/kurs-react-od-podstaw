@@ -15,7 +15,7 @@ const initialStateItems = [
 
 class App extends React.Component {
   state = {
-    items: [...initialStateItems]
+    items: [...initialStateItems],
   };
 
   addItem = e => {

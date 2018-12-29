@@ -14,27 +14,50 @@ const Form = ({ submitFn }) => (
           placeholder=" "
           maxLength="30"
         />
-        <label className={styles.label} htmlFor="name">Name</label>
+        <label className={styles.label} htmlFor="name">
+          Name
+        </label>
         <div className={styles.formItemBar} />
       </div>
       <div className={styles.formItem}>
-        <input className={styles.input} type="text" name="link" id="link" placeholder=" " />
-        <label className={styles.label} htmlFor="link">Link</label>
+        <input
+          className={styles.input}
+          type="text"
+          name="link"
+          id="link"
+          placeholder=" "
+        />
+        <label className={styles.label} htmlFor="link">
+          Link
+        </label>
         <div className={styles.formItemBar} />
       </div>
       <div className={styles.formItem}>
-        <input className={styles.input} type="text" name="image" id="image" placeholder=" " />
-        <label className={styles.label} htmlFor="image">Image</label>
+        <input
+          className={styles.input}
+          type="text"
+          name="image"
+          id="image"
+          placeholder=" "
+        />
+        <label className={styles.label} htmlFor="image">
+          Image
+        </label>
         <div className={styles.formItemBar} />
       </div>
       <div className={styles.formItem}>
-        <textarea className={styles.textarea} name="description" id="description" placeholder=" " />
-        <label className={styles.label} htmlFor="description">Description</label>
+        <textarea
+          className={styles.textarea}
+          name="description"
+          id="description"
+          placeholder=" "
+        />
+        <label className={styles.label} htmlFor="description">
+          Description
+        </label>
         <div className={styles.formItemBar} />
       </div>
-      <button className={styles.button}>
-        add new item
-      </button>
+      <button className={styles.button}>add new item</button>
     </form>
   </div>
 );

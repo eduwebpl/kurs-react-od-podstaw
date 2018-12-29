@@ -8,7 +8,12 @@ const ListItem = ({ image, name, description, twitterLink }) => (
     <div>
       <h2 className={styles.name}>{name}</h2>
       <p className={styles.description}>{description}</p>
-      <a href={twitterLink} target="_blank" className={styles.button}>
+      <a
+        href={twitterLink}
+        target="_blank"
+        className={styles.button}
+        rel="noopener noreferrer"
+      >
         visit twitter page
       </a>
     </div>
@@ -19,11 +24,11 @@ ListItem.propTypes = {
   image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   description: PropTypes.string,
-  twitterLink: PropTypes.string.isRequired
+  twitterLink: PropTypes.string.isRequired,
 };
 
 ListItem.defaultProps = {
-  description: "One of the React creators"
+  description: "One of the React creators",
 };
 
 export default ListItem;
