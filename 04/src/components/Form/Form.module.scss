@@ -1,0 +1,17 @@
+.wrapper {
+  width: 50%;
+  margin: 50px auto 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.form {
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
