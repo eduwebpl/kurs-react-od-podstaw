@@ -1,5 +1,9 @@
 import React from "react";
 import "./index.css";
+import { BrowserRouter, Route } from 'react-router-dom';
+import TwittersView from '../TwittersView/TwittersView';
+import ArticlesView from '../ArticlesView/ArticlesView';
+import NotesView from '../NotesView/NotesView';
 
 const initialStateItems = [
   {
@@ -34,9 +38,14 @@ class Root extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>hello world</h1>
-      </div>
+      <BrowserRouter>
+        <>
+          <h1>hello world</h1>
+          <Route exact path="/" component={TwittersView} />
+          <Route path="/articles" component={ArticlesView} />
+          <Route path="/notes" component={NotesView} />
+        </>
+      </BrowserRouter>
     );
   }
 }
