@@ -29,9 +29,11 @@ class Form extends React.Component {
   };
 
   render() {
+    const { activeOption } = this.state;
+
     return (
       <div className={styles.wrapper}>
-        <Title>Add new {descriptions[this.state.activeOption]}</Title>
+        <Title>Add new {descriptions[activeOption]}</Title>
         <form
           autoComplete="off"
           className={styles.form}
@@ -40,29 +42,41 @@ class Form extends React.Component {
           <div className={styles.formOptions}>
             <Radio
               id={types.twitter}
-              checked={this.state.activeOption === types.twitter}
+              checked={activeOption === types.twitter}
               changeFn={() => this.handleRadioButtonChange(types.twitter)}
             >
               Twitter
             </Radio>
             <Radio
               id={types.article}
-              checked={this.state.activeOption === types.article}
+              checked={activeOption === types.article}
               changeFn={() => this.handleRadioButtonChange(types.article)}
             >
               Article
             </Radio>
             <Radio
               id={types.note}
-              checked={this.state.activeOption === types.note}
+              checked={activeOption === types.note}
               changeFn={() => this.handleRadioButtonChange(types.note)}
             >
               Note
             </Radio>
           </div>
-          <Input name="name" label="Name" maxLength={30} />
-          <Input name="link" label="Twitter link" />
-          <Input name="image" label="Image" />
+          <Input
+            name="name"
+            label={activeOption === types.twitter ? "Twitter Name" : "Title"}
+            maxLength={30}
+          />
+          {activeOption !== types.note ? (
+            <Input
+              name="link"
+              label={activeOption === types.twitter ? "Twitter Link" : "Link"}
+            />
+          ) : null}
+
+          {activeOption === types.twitter ? (
+            <Input name="image" label="Image" />
+          ) : null}
           <Input tag="textarea" name="description" label="Description" />
           <Button>add new item</Button>
         </form>
