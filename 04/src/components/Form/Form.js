@@ -6,7 +6,7 @@ import Title from '../Title/Title';
 
 const Form = ({ submitFn }) => (
   <div className={styles.wrapper}>
-    <Title>Add new twitter account</Title>
+    <Title>Add new favorite Twitter account</Title>
     <form autoComplete="off" className={styles.form} onSubmit={submitFn}>
       <Input
         name="name"
