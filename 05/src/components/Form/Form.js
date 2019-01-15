@@ -51,7 +51,7 @@ class Form extends React.Component {
             <form
               autoComplete="off"
               className={styles.form}
-              onSubmit={context.addItem}
+              onSubmit={(e) => context.addItem(e, this.state)}
             >
               <div className={styles.formOptions}>
                 <Radio
