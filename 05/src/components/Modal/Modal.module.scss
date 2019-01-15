@@ -1,0 +1,46 @@
+.wrapper {
+  padding: 70px 80px 50px;
+  top: 10%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 60vw;
+  background-color: white;
+  box-shadow: 0 20px 40px -5px rgba(#1e58ff, .3);
+  position: fixed;
+}
+
+.closeButton {
+  width: 27px;
+  height: 27px;
+  background: #1e58ff;
+  border: none; 
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  
+  &::before, 
+  &::after {
+    content: '';
+    width: 16px;
+    height: 2px;
+    position: absolute;
+    background: white;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    transform-origin: 50%;
+  }
+  
+  &::before {
+    transform: rotate(45deg);
+  }
+  
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
