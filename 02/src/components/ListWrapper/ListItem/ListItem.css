@@ -25,8 +25,20 @@
 }
 
 .listItem__button{
+    font-size: 10px;
     padding: 7px 12px;
+    text-decoration: none;
     font-weight: 500;
     background: none;
+    border: 2px solid #1e58ff;
+}
+
+.listItem__button:hover{
+    font-size: 10px;
+    padding: 7px 12px;
+    text-decoration: none;
+    font-weight: 500;
+    background: #1e58ff;
+    color: #fff;
     border: 2px solid #1e58ff;
 }
