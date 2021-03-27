@@ -1,9 +1,8 @@
 import React from 'react';
 import ListItem from './ListItem/ListItem';
 import './ListWrapper.css';
-import {twitterAccounts} from '../../data/twitterAccounts';
 
-const ListWrapper = () => (
+const ListWrapper = (props) => (
     <ul className="listWrapper__wrapper">
         {/* destrukturyzacja z tA.map(item => (<ListItem name={item.name}
             zrobiono tA.map(({name, image})=> name={name} image={image})
@@ -12,7 +11,7 @@ const ListWrapper = () => (
             key dodajemy po to zeby w konsoli nie dostawac bledu
 
         */}
-        {twitterAccounts.map(item =>(
+        {props.items.map(item =>(
             <ListItem key={item.name} {...item} />
         ))}
     </ul>
