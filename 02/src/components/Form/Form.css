@@ -33,3 +33,29 @@ textarea{
     resize: none;
     min-height: 150px;
 }
+
+input{
+    line-height: 22px;
+}
+
+button{
+    font-size: 10px;
+    text-decoration: none;
+    border: 2px solid #1E58FF;
+    background: none;
+    color: #1E58FF;
+    padding: 7px 12px;
+    font-weight: 500;
+    width: 28%;
+}
+
+button:hover{
+    font-size: 10px;
+    text-decoration: none;
+    border: 2px solid #1E58FF;
+    background: #1E58FF;
+    color: #fff;
+    padding: 7px 12px;
+    font-weight: 500;
+    width: 28%;
+}
