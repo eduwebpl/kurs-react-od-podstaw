@@ -4,19 +4,19 @@
     padding: 0;
 }
 
-.form__wrapper{
-    width: 900px;
+.wrapper{
+    width: 50%;
     margin: 50px auto 100px;
     display: grid;
     grid-template-columns: 45%;
     justify-content: center;
-}
 
-.form__wrapper h2{
-    font-size: 22px;
-    font-weight: 600;
-    text-align: center;
-    color: #1E58FF;
+    h2{
+        font-size: 22px;
+        font-weight: 600;
+        text-align: center;
+        color: #1E58FF;
+    }
 }
 
 .form__item{
