@@ -3,7 +3,7 @@ import Form from './components/Form/Form';
 import ListWrapper from './components/ListWrapper/ListWrapper';
 import './index.css';
 
-const inistialStateItems = [{
+const initialStateItems = [{
     image: 'https://www.tate.org.uk/sites/default/files/styles/width-720/public/malevich5_0.jpg',
     name: 'Dan Abramov',
     description: 'Working on @reactjs. The demo guy.',
@@ -30,11 +30,26 @@ const inistialStateItems = [{
 
 class App extends React.Component {
     state={
-        items: [...inistialStateItems],
+        items: [...initialStateItems],
     }
 
     addItem = (e) =>{
-        e.preventDeafult();
+        e.preventDefault();
+
+        const newItem = {
+            name:e.target[0].value,
+            twitterLink:e.target[1].value,
+            image:e.target[2].value,
+            description:e.target[3].value,
+        }
+
+        console.log(newItem);
+
+        this.setState(prevState => ({
+            items: [...prevState.items, newItem],
+        }));
+
+        e.target.reset();
     }
 
     render(){
