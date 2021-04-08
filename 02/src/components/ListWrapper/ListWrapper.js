@@ -1,9 +1,9 @@
 import React from 'react';
 import ListItem from './ListItem/ListItem';
-import './ListWrapper.css';
+import styles from './ListWrapper.module.scss';
 
 const ListWrapper = (props) => (
-    <ul className="listWrapper__wrapper">
+    <ul className={styles.listWrapper__wrapper}>
         {/* destrukturyzacja z tA.map(item => (<ListItem name={item.name}
             zrobiono tA.map(({name, image})=> name={name} image={image})
             a następnie tA.map(item) => (<ListItem {...item}/>)
