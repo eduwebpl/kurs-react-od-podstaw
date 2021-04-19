@@ -1,0 +1,61 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    width: 50%;
+    margin: 50px auto 100px;
+    display: grid;
+    grid-template-columns: 45%;
+    justify-content: center;
+
+    h2{
+        font-size: 22px;
+        font-weight: 600;
+        text-align: center;
+        color: #1E58FF;
+    }
+}
+
+.form__item{
+    font-size: 16px;
+    height: 40px;
+    margin: 20px 0;
+    border: none;
+    border-bottom: 2px solid rgba(80, 78, 78, 0.473);
+
+}
+
+textarea{
+    resize: none;
+    min-height: 150px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+input{
+    line-height: 22px;
+}
+
+button{
+    font-size: 12px;
+    text-decoration: none;
+    border: 2px solid #1E58FF;
+    background: none;
+    color: #1E58FF;
+    padding: 7px 12px;
+    font-weight: 500;
+    width: 24%;
+}
+
+button:hover{
+    font-size: 12px;
+    text-decoration: none;
+    border: 2px solid #1E58FF;
+    background: #1E58FF;
+    color: #fff;
+    padding: 7px 12px;
+    font-weight: 500;
+    width: 24%;
+}
